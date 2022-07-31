@@ -4,13 +4,12 @@ import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class StudentsTest{
+public class InstructorsTest{
 
     @Test
-    public void test(){
-        int expected=5;
-        int actual = Students.getInstance().count();
-
+    public void InstructorTest(){
+        int expected =3;
+        int actual = Instructors.getInstance().count();
         Assert.assertEquals(expected,actual);
     }
 

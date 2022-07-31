@@ -7,7 +7,7 @@ import java.util.List;
 public final class Students extends People<Student> {
 
     private static Students INSTANCE;
-    private static List list;
+
 
     private Students(){
 
@@ -16,7 +16,7 @@ public final class Students extends People<Student> {
          Student mike=new Student(1,"Mike");
          Student jiayong=new Student(1,"Jiayong");
          Student troy= new Student(1,"Troy");
-         list = new ArrayList<>(Arrays.asList(nick, ryan,mike,jiayong,troy));
+         personList = new ArrayList<>(Arrays.asList(nick, ryan,mike,jiayong,troy));
     }
     static{
         try{
@@ -26,19 +26,19 @@ public final class Students extends People<Student> {
         }
     }
 
-    private static Students getInstance(){
+    static Students getInstance(){
         return INSTANCE;
     }
 
 
 
     public List<Student> getStudents(){
-        return list;
+        return personList;
     }
 
 
     @Override
     public Student[] toArray() {
-        return getStudents().toArray(new Student[0]);
+        return personList.toArray(new Student[0]);
     }
 }
